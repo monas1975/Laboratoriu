@@ -18,6 +18,15 @@ public class Analizy1 {
     private long id; //nr parti
 
     private LocalDateTime datetime;
+    private LocalDateTime updateDataTime;
+
+    public LocalDateTime getUpdateDataTime() {
+        return updateDataTime;
+    }
+
+    public void setUpdateDataTime(LocalDateTime updateDataTime) {
+        this.updateDataTime = updateDataTime;
+    }
 
     @OneToOne
     @JoinColumn(name="produkt")

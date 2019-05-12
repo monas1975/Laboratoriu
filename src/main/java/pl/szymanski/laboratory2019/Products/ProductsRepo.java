@@ -4,4 +4,5 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.CrudRepositoryExtensionsKt;
 
 public interface ProductsRepo extends CrudRepository<Products,Long> {
+    Products findByName(String name);
 }

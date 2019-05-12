@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @Entity
@@ -12,12 +13,17 @@ public class ParametrC {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private String tagname;
-    private Date datatime;
+   // private String tagname;
+    private LocalDateTime datatime;
     private Double value;
 
 
     public ParametrC() {
+    }
+
+    public ParametrC(LocalDateTime datatime, Double value) {
+        this.datatime = datatime;
+        this.value = value;
     }
 
     public long getId() {
@@ -28,19 +34,11 @@ public class ParametrC {
         this.id = id;
     }
 
-    public String getTagname() {
-        return tagname;
-    }
-
-    public void setTagname(String tagname) {
-        this.tagname = tagname;
-    }
-
-    public Date getDatatime() {
+    public LocalDateTime getDatatime() {
         return datatime;
     }
 
-    public void setDatatime(Date datatime) {
+    public void setDatatime(LocalDateTime datatime) {
         this.datatime = datatime;
     }
 
@@ -56,7 +54,6 @@ public class ParametrC {
     public String toString() {
         return "ParametrC{" +
                 "id=" + id +
-                ", tagname='" + tagname + '\'' +
                 ", datatime=" + datatime +
                 ", value=" + value +
                 '}';
