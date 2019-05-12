@@ -121,6 +121,7 @@ public class Analizy1Gui extends VerticalLayout {
         analizy1.setParametrA(parametrA);
         analizy1.setParametrB(parametrB);
         analizy1.setParametrC(parametrC);
+       // analizy1Repo.sa
         // Book book = new Book();
         // book.setAuthor(textField.getValue());
         // book.setTitle(textField2.getValue());
