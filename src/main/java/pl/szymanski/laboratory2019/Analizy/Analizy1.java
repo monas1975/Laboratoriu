@@ -6,6 +6,7 @@ import pl.szymanski.laboratory2019.Parameters.ParameterC.ParametrC;
 import pl.szymanski.laboratory2019.Products.Products;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @Entity
@@ -16,7 +17,7 @@ public class Analizy1 {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id; //nr parti
 
-    private Date datetime;
+    private LocalDateTime datetime;
 
     @OneToOne
     @JoinColumn(name="produkt")
@@ -44,11 +45,11 @@ public class Analizy1 {
         this.id = id;
     }
 
-    public Date getDatetime() {
+    public LocalDateTime getDatetime() {
         return datetime;
     }
 
-    public void setDatetime(Date datetime) {
+    public void setDatetime(LocalDateTime datetime) {
         this.datetime = datetime;
     }
 
