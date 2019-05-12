@@ -36,13 +36,63 @@ public class Analizy1 {
     private ParametrC parametrC;
 
 
+    public long getId() {
+        return id;
+    }
 
+    public void setId(long id) {
+        this.id = id;
+    }
 
+    public Date getDatetime() {
+        return datetime;
+    }
 
+    public void setDatetime(Date datetime) {
+        this.datetime = datetime;
+    }
 
+    public Products getProducts() {
+        return products;
+    }
 
+    public void setProducts(Products products) {
+        this.products = products;
+    }
 
+    public ParametrA getParametrA() {
+        return parametrA;
+    }
 
+    public void setParametrA(ParametrA parametrA) {
+        this.parametrA = parametrA;
+    }
 
+    public ParametrB getParametrB() {
+        return parametrB;
+    }
 
+    public void setParametrB(ParametrB parametrB) {
+        this.parametrB = parametrB;
+    }
+
+    public ParametrC getParametrC() {
+        return parametrC;
+    }
+
+    public void setParametrC(ParametrC parametrC) {
+        this.parametrC = parametrC;
+    }
+
+    @Override
+    public String toString() {
+        return "Analizy1{" +
+                "id=" + id +
+                ", datetime=" + datetime +
+                ", products=" + products +
+                ", parametrA=" + parametrA +
+                ", parametrB=" + parametrB +
+                ", parametrC=" + parametrC +
+                '}';
+    }
 }
