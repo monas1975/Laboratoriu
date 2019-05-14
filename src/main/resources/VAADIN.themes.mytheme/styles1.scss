@@ -1,0 +1,13 @@
+@import "VAADIN.themes.mytheme/othertheme.scss";
+.othertheme {
+  @include othertheme;
+
+  .textstyle {
+    font-family: HelveticaRounded;
+    font-size: 40px;
+    font-style: italic;
+  }
+}
+
+
+

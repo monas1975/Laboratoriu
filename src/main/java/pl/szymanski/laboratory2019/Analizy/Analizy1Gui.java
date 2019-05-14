@@ -22,7 +22,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-@StyleSheet("static/css/style.css")
+@StyleSheet("style.css")
 
 @Route("addAnalise")
 public class Analizy1Gui extends VerticalLayout {
@@ -54,7 +54,8 @@ public class Analizy1Gui extends VerticalLayout {
     private NumberField numberField = new NumberField("Parametr A");
     private NumberField numberField2 = new NumberField("Parametr B");
     private NumberField numberField3 = new NumberField("Parametr C");
-    final VerticalLayout layout = new VerticalLayout();
+   final VerticalLayout layout = new VerticalLayout();
+
 
     private Button button2 = new Button("Wprowadz wyniki");
 
@@ -76,6 +77,10 @@ public class Analizy1Gui extends VerticalLayout {
         for (Products products : all) {
             producsNames.add(products.getName());
         }
+
+        layout.setSizeFull();
+
+        UI.getCurrent().getPage().addStyleSheet("VAADIN.themes.mytheme/style.css");
         comboBox.setItems(producsNames);
 
         Iterable<Analizy1> allAnalzy1 = analizy1Repo.findAll();
@@ -90,6 +95,7 @@ public class Analizy1Gui extends VerticalLayout {
        // tempNow = analizy1List.get(analizy1List.size() - 1).getDatetime();
 
 
+        UI.getCurrent().getPage().addStyleSheet("VAADIN.themes.mytheme/style.css");
         layout.setSizeFull();
         add(layout);
 

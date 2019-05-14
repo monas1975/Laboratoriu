@@ -60,8 +60,13 @@ public class ParametrAGui extends VerticalLayout {
 
         layout.setSizeFull();
         add(layout);
+
+        layout.add(chart);
         add(grid);
-        add(chart);
+        //layout.add(grid);
+
+       // add(grid);
+       // add(chart);
 
     }
 }
