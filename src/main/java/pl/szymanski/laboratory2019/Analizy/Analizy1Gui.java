@@ -22,7 +22,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-@StyleSheet("style.css")
+@StyleSheet("public/css/style.css")
 
 @Route("addAnalise")
 public class Analizy1Gui extends VerticalLayout {
@@ -80,7 +80,7 @@ public class Analizy1Gui extends VerticalLayout {
 
         layout.setSizeFull();
 
-        UI.getCurrent().getPage().addStyleSheet("VAADIN.themes.mytheme/style.css");
+        //UI.getCurrent().getPage().addStyleSheet("VAADIN.themes.mytheme/style.css");
         comboBox.setItems(producsNames);
 
         Iterable<Analizy1> allAnalzy1 = analizy1Repo.findAll();
