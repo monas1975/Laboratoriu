@@ -13,7 +13,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.util.ArrayList;
 import java.util.List;
 
-@StyleSheet("VAADIN.themes.mytheme/style.css")
+@StyleSheet("static/css/styles.css")
+//@StyleSheet("http://www.example.com/example.css")
 @Route("addProduct")
 public class ProductsGui<style, html> extends VerticalLayout {
 
@@ -25,6 +26,7 @@ public class ProductsGui<style, html> extends VerticalLayout {
     private Button button = new Button("Dodaj produkt");
     private Grid<Products> grid = new Grid<>(Products.class);
     private VerticalLayout layout = new VerticalLayout();
+
 
     @Autowired
     public ProductsGui(ProductsRepo productsRepo){
@@ -39,8 +41,9 @@ public class ProductsGui<style, html> extends VerticalLayout {
         grid.setItems(productsList);
 
 
-        UI.getCurrent().getPage().addStyleSheet("VAADIN.themes.mytheme/style.css");
+       // UI.getCurrent().getPage().addStyleSheet("public/css/styles.css");
         layout.setSizeFull();
+
         add(layout);
         add(textField1);
         add(textArea);

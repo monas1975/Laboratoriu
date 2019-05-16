@@ -22,7 +22,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-@StyleSheet("public/css/style.css")
+@StyleSheet("src/main/webapp/styles/styles.css")
 
 @Route("addAnalise")
 public class Analizy1Gui extends VerticalLayout {
